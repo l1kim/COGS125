@@ -1,4 +1,3 @@
-// PortfolioPage.js
 import './App.css';
 
 function PortfolioPage() {
