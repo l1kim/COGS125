@@ -1,6 +1,7 @@
+// PortfolioPage.js
 import './App.css';
 
-function PortfolioPage() {
+function PortfolioPage({ onBack }) {
   return (
     <div className="App">
       <header className="App-header">
@@ -8,7 +9,9 @@ function PortfolioPage() {
         <p className="App-description">
           Here’s a collection of my favorite work.
         </p>
-        <a href="/" className="App-link">Go Back Home</a>
+        <button className="App-button" onClick={onBack}>
+          Go Back Home
+        </button>
       </header>
     </div>
   );

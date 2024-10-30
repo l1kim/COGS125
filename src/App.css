@@ -8,6 +8,26 @@
   background-color: #f7f1f0; /* Soft pink background */
 }
 
+.App-button {
+  background-color: #ffb3b3; /* Light pink */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.App-button:hover {
+  background-color: #ff6666; /* Darker pink */
+}
+
+
 .App-header {
   background-color: #f7e9e3; /* Soft beige-pink */
   min-height: 100vh;
