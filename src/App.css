@@ -6,6 +6,17 @@
   text-align: center;
   font-family: 'Nunito', sans-serif;
   background-color: #f7f1f0; /* Soft pink background */
+  opacity: 0;
+  animation: fadeIn 1.2s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .App-button {
@@ -21,12 +32,24 @@
   transition-duration: 0.4s;
   cursor: pointer;
   border-radius: 5px;
+  transition: transform 0.2s, background-color 0.2s;
 }
 
 .App-button:hover {
   background-color: #ff6666; /* Darker pink */
+  transform: scale(1.05); /* Slight scaling on hover */
+  animation: pulse 1.5s infinite ease-in-out;
+  box-shadow: 0 0 15px rgba(255, 182, 193, 0.6); /* Light pink glow */
 }
 
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
 
 .App-header {
   background-color: #f7e9e3; /* Soft beige-pink */
@@ -38,11 +61,38 @@
   color: #5b4033; /* Soft brown for text */
 }
 
+.App-logo {
+  height: 120px; /* Adjust size for emphasis */
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease; /* Smooth fade-in on load */
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .App-title {
   font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
   color: #a16b5a; /* Warm brown-pink */
   margin-bottom: 0.5em;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Adjust distance to make it subtle */
+  }
 }
 
 .App-description {
